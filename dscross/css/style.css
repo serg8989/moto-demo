@@ -366,3 +366,57 @@ html{-webkit-tap-highlight-color:transparent}
   .hdr__logo img{height:50px}
   .hero__img--photo img{width:min(66vw,300px)}
 }
+
+/* ===== Китайский стиль: красный лак, золото, тушь, облака 祥云, орнамент 回纹 ===== */
+:root{--red:#c8102e;--red-d:#a10c24;--gold:#d4a64a;--gold-l:#f0cf7e;--ink:#140b0b;--ink-2:#1e1212;--ink-3:#2a1818;--bg:#f6efe2;
+  --han:"STKaiti","KaiTi","Kaiti SC","STXingkai","Ma Shan Zheng",serif}
+.han{font-family:var(--han);font-style:normal;font-weight:400;letter-spacing:.05em}
+.kicker{color:var(--red)}
+.kicker::before{width:10px;height:10px;background:var(--gold);transform:rotate(45deg)}
+.kicker .han{color:var(--gold);font-size:17px;letter-spacing:.2em;text-transform:none}
+.sec--dark .kicker{color:var(--gold-l)}
+.btn{background:linear-gradient(180deg,#d8152f,var(--red));box-shadow:inset 0 0 0 1px rgba(240,207,126,.35)}
+.btn:hover{background:var(--red-d);box-shadow:0 12px 30px rgba(200,16,46,.4),inset 0 0 0 1px var(--gold)}
+.btn--dark{background:var(--ink);box-shadow:inset 0 0 0 1px rgba(212,166,74,.45)}
+.btn--ghost{box-shadow:inset 0 0 0 2px rgba(240,207,126,.55)}
+.hdr.is-solid,.hdr--solid{background:rgba(20,11,11,.94);box-shadow:0 1px 0 rgba(212,166,74,.35)}
+.nav a[aria-current="page"]{color:var(--gold-l)}
+
+/* Первый экран: тёмный лак, золотые облака, вертикальные иероглифы, печать */
+.hero{background:radial-gradient(ellipse 60% 70% at 75% 45%,rgba(200,16,46,.45),transparent 70%),url(../img/cn-cloud.svg) 0 0/360px auto,linear-gradient(160deg,#241010,#120909 60%)}
+.hero::before{background:linear-gradient(0deg,rgba(20,11,11,.9),transparent 35%);opacity:1}
+.hero::after{height:14px;background:url(../img/cn-fret.svg) 0 0/28px 14px repeat-x,#140b0b}
+.hero__han{position:absolute;right:max(2vw,calc(50% - 700px));top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font:400 clamp(70px,9vw,140px)/1 var(--han);color:rgba(212,166,74,.13);letter-spacing:.08em;pointer-events:none;user-select:none}
+.hero__top{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.hero__top .hero__tag{margin:0}
+.seal{display:inline-grid;place-items:center;width:52px;height:52px;flex:none;border-radius:8px;background:var(--red);color:#fff8e6;font:400 20px/1 var(--han);writing-mode:vertical-rl;letter-spacing:.05em;box-shadow:inset 0 0 0 2px #fff8e6,inset 0 0 0 4px var(--red);transform:rotate(-4deg)}
+.hero__tag{border-color:rgba(212,166,74,.4);background:rgba(212,166,74,.08)}
+.hero__tag i{background:var(--gold);box-shadow:0 0 0 4px rgba(212,166,74,.25)}
+.hero h1 em{background:var(--red);box-shadow:0 0 0 2px rgba(240,207,126,.0)}
+.hero__facts{border-top:1px solid rgba(212,166,74,.35)}
+.hero__facts b{color:var(--gold-l)}
+.hero__img--photo::before{background:var(--red);transform:rotate(3deg);box-shadow:inset 0 0 0 6px var(--ink),inset 0 0 0 8px var(--gold)}
+.hero__img--photo img{box-shadow:0 0 0 3px var(--gold),0 30px 60px rgba(0,0,0,.5)}
+
+/* Светлые секции — рисовая бумага, тёмные — лак с облаками и орнаментом сверху */
+.sec--grey{background:var(--bg)}
+.sec--dark{position:relative;background:url(../img/cn-cloud.svg) 0 0/360px auto,var(--ink)}
+.sec--dark::before{content:"";position:absolute;inset:0 0 auto;height:14px;background:url(../img/cn-fret.svg) 0 0/28px 14px repeat-x;opacity:.8}
+.show__bg.han{color:rgba(200,16,46,.07);font-size:clamp(80px,14vw,200px)}
+.ncard time,.mcard .badge{color:var(--red)}
+.ncard{box-shadow:inset 0 0 0 1px rgba(212,166,74,.25)}
+.ph{background:url(../img/cn-cloud.svg) 0 0/360px auto,linear-gradient(160deg,#241010,#120909)}
+.ph::after{content:"";position:absolute;inset:auto 0 0;height:14px;background:url(../img/cn-fret.svg) 0 0/28px 14px repeat-x}
+.ftr{background:#0d0707;border-top:3px solid var(--red);position:relative}
+.ftr::before{content:"";position:absolute;inset:-17px 0 auto;height:14px;background:url(../img/cn-fret.svg) 0 0/28px 14px repeat-x}
+:focus-visible{outline-color:var(--gold)}
+@media(max-width:900px){
+  .hero__han{right:6px;top:auto;bottom:120px;transform:none;font-size:64px;color:rgba(212,166,74,.1)}
+  .seal{width:44px;height:44px;font-size:17px}
+}
+.ph::before{background:linear-gradient(90deg,rgba(20,11,11,.55),rgba(20,11,11,.1))}
+.btn--ghost{background:transparent}
+.btn--ghost:hover{background:var(--gold-l);color:var(--ink)}
+.btn--dark{background:var(--ink)}
+.hero__han{right:auto;left:max(4px,calc(50% - 720px));color:rgba(212,166,74,.09)}
+@media(max-width:900px){.hero__han{left:auto;right:6px}}
