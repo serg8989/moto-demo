@@ -18,9 +18,7 @@
 <meta name="apple-mobile-web-app-title" content="DSCROSS">
 <meta name="format-detection" content="telephone=no">
 <link rel="preload" href="fonts/exo2-cyr.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="img/ds-hero.webp" as="image" fetchpriority="high">
-<link rel="preload" href="img/hero-bg.webp" as="image">
-<link rel="stylesheet" href="css/style.css?v=mwnkvsie">
+<link rel="stylesheet" href="css/style.css?v=mwnm318o">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MotorcycleDealer","name":"DSCROSS — мотоциклы из Китая","telephone":"+7 914 664-49-49","email":"info@dscross.ru","address":"Владивосток, ул. Примерная, 1","url":"https://example.ru","brand":"DSCROSS"}</script>
 </head>
 <body>
@@ -37,24 +35,40 @@
 </header>
 <main>
 
-<section class="hero">
+<section class="hero hero--xd">
+  <picture class="hero__bg" aria-hidden="true">
+    <source media="(max-width: 700px) and (orientation: portrait)" srcset="img/xd-hero-m.webp">
+    <source media="(max-width: 1300px)" srcset="img/xd-hero-1200.webp">
+    <img src="img/xd-hero.webp" alt="" width="1920" height="1072" fetchpriority="high">
+  </picture>
   <div class="hero__han" aria-hidden="true">越野摩托</div>
   <div class="wrap">
-    <div>
+    <div class="xd">
       <div class="hero__top"><span class="seal" aria-hidden="true">越野</span><span class="hero__tag"><i></i>DSCROSS — мотоциклы из Китая</span></div>
-      <h1>Мотоциклы <em>для тех,</em> кто выбирает свободу</h1>
-      <p class="hero__lead">Эндуро и электромотоциклы из Китая под любой бюджет. Подберём, привезём во Владивосток и отправим по России. Мы сами гоняем — знаем, что советуем.</p>
-      <div class="hero__cta">
-        <a class="btn" href="catalog.html">Выбрать модель <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn--ghost" href="https://t.me/DSCROSS" target="_blank" rel="noopener">Наличие в Telegram</a>
+      <h1 class="xd__title">Новый <em>XD</em> в продаже</h1>
+      <p class="xd__slogan">Быстрее · Мощнее · Надёжнее</p>
+      <p class="xd__ribbon">Электро-эндуро нового поколения</p>
+      <div class="xd__price">
+        <span class="xd__start">Старт продаж</span>
+        <div class="xd__main"><b>XD</b><strong>449 000 ₽</strong></div>
+        <div class="xd__opts">
+          <div><span>Подвеска KYB</span><b>449 000 ₽</b></div>
+          <div><span>Подвеска KKE</span><b>419 000 ₽</b></div>
+        </div>
       </div>
-      <div class="hero__facts">
-        <div><b>26</b><span>моделей в 8 сериях</span></div>
-        <div><b>Китай → РФ</b><span>доставка до Владивостока</span></div>
-        <div><b>Своя команда</b><span>гоняем эндуро сами</span></div>
+      <div class="hero__cta">
+        <a class="btn" href="#lead" data-topic="Заказ XD">Оформить заказ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--ghost" href="models/xd-pro.html">Подробнее о XD</a>
       </div>
     </div>
-    <div class="hero__img hero__img--photo"><img src="img/ds-hero.webp" width="880" height="1030" alt="Гонщик команды DSCROSS у своего мотоцикла" fetchpriority="high"></div>
+  </div>
+  <div class="xd__feats">
+    <div class="wrap">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg><span>Мощный привод</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span>Горы и грязь</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.2 12.2a6 6 0 0 0-8.5-8.5L5 10.5V19h8.5z"/><path d="M16 8 2 22M17.5 15H9"/></svg><span>Лёгкая рама</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2M6 11v2M10 11v2"/></svg><span>Умное приложение</span></div>
+    </div>
   </div>
 </section>
 
@@ -238,7 +252,7 @@
     </div>
     <div class="row2">
       <div class="field"><label for="f-model">Модель</label><select id="f-model" name="model"><option value="">Пока не выбрал</option><option>E·XE 880 Enduro</option><option>E·XE 880 Super</option><option>E·XE-L3E</option><option>E·XE800 Enduro</option><option>X·D PRO</option><option>XE PRO R</option><option>XE PRO S</option><option>XE PRO S Enduro</option><option>XE PRO S Super</option><option>XE PRO R L3E</option><option>XE L1E-B</option><option>XF Pro</option><option>XF PRO MX</option><option>XF Pro Super</option><option>XF PRO L1E</option><option>EX800</option><option>EX800 PRO</option><option>EX800 Super</option><option>ET 700 TRAIL</option><option>ET 600 TRAIL</option><option>E·XT700</option><option>E·XT600</option><option>E·XT500</option><option>EXT500 L1E</option><option>E·AT 600 TRIAL</option><option>E·AT 500 TRIAL</option></select></div>
-      <div class="field"><label for="f-topic">Цель</label><select id="f-topic" name="topic"><option>Подобрать мотоцикл</option><option>Узнать цену</option><option>Покупка в кредит / рассрочку</option><option>Сервис</option><option>Другое</option></select></div>
+      <div class="field"><label for="f-topic">Цель</label><select id="f-topic" name="topic"><option>Подобрать мотоцикл</option><option>Заказ XD</option><option>Узнать цену</option><option>Покупка в кредит / рассрочку</option><option>Сервис</option><option>Другое</option></select></div>
     </div>
     <div class="field"><label for="f-msg">Комментарий</label><textarea id="f-msg" name="message" placeholder="Удобное время, опыт езды, вопросы"></textarea></div>
     <input type="text" name="website" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -294,6 +308,6 @@
   <a class="tg" href="https://t.me/Crestovich" aria-label="Написать в Telegram" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.8c.9-.3 1.7.2 1.4 1.5z"/></svg></a>
   <a class="wa" href="https://wa.me/79146644949" aria-label="Написать в WhatsApp" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.8-.5zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
 </div>
-<script src="js/app.js?v=mwnkvsie" defer></script>
+<script src="js/app.js?v=mwnm318o" defer></script>
 </body>
 </html>

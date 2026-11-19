@@ -448,3 +448,75 @@ html{-webkit-tap-highlight-color:transparent}
   .prod__img img{max-height:calc(64vh - 32px);height:auto;width:auto;max-width:100%;object-fit:contain}
   .hero__img{align-self:center}
 }
+
+/* ===== Первый экран «Новый XD»: горы и грязь (фон из Gemini) ===== */
+.hero--xd{background:#0c0707;min-height:min(100svh,940px);padding:calc(var(--hdr) + 30px) 0 0;flex-direction:column;align-items:stretch;justify-content:center}
+.hero--xd::before{z-index:1;background:linear-gradient(90deg,rgba(12,7,7,.94) 0%,rgba(12,7,7,.78) 34%,rgba(12,7,7,.15) 62%,transparent 100%),linear-gradient(0deg,rgba(12,7,7,.95) 0%,transparent 26%)}
+.hero--xd::after{display:none}
+.hero__bg{position:absolute;inset:0}
+.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+.hero--xd .wrap{position:relative;z-index:2;display:block;flex:1;display:flex;align-items:center}
+.hero--xd .hero__han{z-index:2}
+.xd{max-width:620px;padding:10px 0 40px}
+.xd__title{color:#fff;font:800 italic clamp(40px,6.2vw,86px)/.95 var(--head);text-transform:uppercase;margin:0 0 14px;letter-spacing:-.01em}
+.hero .xd__title em{box-shadow:none;display:inline-block;font-style:inherit;color:var(--red);background:none;padding:0 .04em;transform:skewX(-6deg);text-shadow:0 0 30px rgba(255,40,60,.65),0 0 2px #ff6070;-webkit-text-stroke:1px #ff4d5e}
+.xd__slogan{font:800 italic clamp(17px,2vw,26px)/1.2 var(--head);color:#fff;text-transform:uppercase;margin:0 0 12px}
+.xd__slogan::before,.xd__slogan::after{content:"//";color:var(--red);margin:0 .4em 0 0}
+.xd__slogan::after{margin:0 0 0 .4em}
+.xd__ribbon{display:inline-block;margin:0 0 26px;padding:8px 18px;background:linear-gradient(90deg,var(--red),#e5233c);color:#fff;font:800 italic clamp(13px,1.3vw,17px) var(--head);text-transform:uppercase;letter-spacing:.03em;transform:skewX(-10deg);box-shadow:inset 0 0 0 1px rgba(240,207,126,.4)}
+.xd__price{border-left:3px solid var(--red);padding:4px 0 4px 18px;margin-bottom:28px}
+.xd__start{display:block;font:800 italic 15px var(--head);color:#fff;text-transform:uppercase;letter-spacing:.06em}
+.xd__start::before{content:"/ ";color:var(--red)}
+.xd__main{display:flex;align-items:baseline;gap:16px;margin:2px 0 12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.18)}
+.xd__main b{font:800 italic clamp(34px,4vw,54px)/1 var(--head);color:#fff}
+.xd__main strong{font:800 italic clamp(34px,4vw,54px)/1 var(--head);color:var(--red);text-shadow:0 0 24px rgba(200,16,46,.5)}
+.xd__opts{display:flex;gap:0}
+.xd__opts div{padding:0 22px;border-left:1px solid rgba(255,255,255,.2)}
+.xd__opts div:first-child{padding-left:0;border:0}
+.xd__opts span{display:block;font-size:14px;color:#d6d0c8}
+.xd__opts b{font:800 italic clamp(20px,2.2vw,28px)/1.1 var(--head);color:var(--red)}
+.xd__feats{position:relative;z-index:2;background:linear-gradient(90deg,rgba(120,8,22,.92),rgba(200,16,46,.92) 50%,rgba(120,8,22,.92));border-top:1px solid rgba(240,207,126,.45)}
+.xd__feats::before{content:"";position:absolute;inset:-14px 0 auto;height:14px;background:url(../img/cn-fret.svg) 0 0/28px 14px repeat-x}
+.xd__feats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.xd__feats .wrap>div{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 10px;color:#fff;font:700 15px var(--head)}
+.xd__feats .wrap>div+div{border-left:1px solid rgba(255,255,255,.22)}
+.xd__feats svg{width:34px;height:34px;flex:none;padding:7px;border-radius:50%;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.75)}
+
+@media(max-width:900px){
+  .hero--xd{min-height:auto}
+  .hero--xd::before{background:linear-gradient(90deg,rgba(12,7,7,.9),rgba(12,7,7,.55) 70%,rgba(12,7,7,.35)),linear-gradient(0deg,rgba(12,7,7,.95),transparent 30%)}
+  .xd__feats .wrap{grid-template-columns:1fr 1fr}
+  .xd__feats .wrap>div{justify-content:flex-start;padding:14px 6px;font-size:14px}
+  .xd__feats .wrap>div:nth-child(3){border-left:0}
+  .xd__feats .wrap>div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.22)}
+}
+@media(max-width:700px) and (orientation:portrait){
+  .hero--xd{min-height:100svh;padding-top:var(--hdr)}
+  .hero__bg img{object-position:50% 0}
+  .hero--xd::before{background:linear-gradient(0deg,rgba(12,7,7,.98) 0%,rgba(12,7,7,.9) 42%,rgba(12,7,7,.25) 62%,rgba(12,7,7,.1) 100%)}
+  .hero--xd .wrap{align-items:flex-end}
+  .xd{padding:38vh 0 26px}
+  .xd__title{font-size:clamp(36px,11vw,50px)}
+  .xd__opts div{padding:0 14px}
+  .hero--xd .hero__cta .btn{flex:1 1 100%}
+  .hero--xd .hero__han{display:none}
+}
+@media(max-height:500px) and (orientation:landscape){
+  .hero--xd{min-height:auto}
+  .xd{padding:10px 0 24px}
+  .xd__title{font-size:36px}
+}
+@media(max-width:700px) and (orientation:portrait){
+  .hero--xd{min-height:auto}
+  .hero__bg{bottom:auto;height:178vw}
+  .hero__bg img{object-position:50% 0}
+  .hero--xd::before{background:linear-gradient(180deg,rgba(12,7,7,.35) 0,rgba(12,7,7,0) 20vw,rgba(12,7,7,0) 78vw,rgba(12,7,7,.92) 108vw,#0c0707 130vw)}
+  .hero--xd .wrap{align-items:flex-start}
+  .xd{padding:88vw 0 26px}
+}
+@media(max-width:360px){
+  .xd__slogan{font-size:14px}
+  .xd__ribbon{font-size:11.5px;padding:7px 12px}
+  .xd__main b,.xd__main strong{font-size:30px}
+  .xd__opts b{font-size:18px}
+}
