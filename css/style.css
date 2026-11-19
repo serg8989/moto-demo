@@ -318,3 +318,33 @@ p{margin:0 0 1em}
 .mcard__foot .price{display:flex;flex-wrap:wrap;align-items:center;gap:2px 6px}
 .mcard__foot .price s{margin:0}
 .mcard__go{white-space:nowrap}
+
+/* ===== iPhone / Safari ===== */
+html{-webkit-tap-highlight-color:transparent}
+.hdr.is-solid,.hdr--solid{-webkit-backdrop-filter:blur(12px)}
+.hdr{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+.fab{right:calc(18px + env(safe-area-inset-right));bottom:calc(18px + env(safe-area-inset-bottom))}
+/* Без внутренней тени и «стеклянного» вида полей iOS; 16px — иначе iPhone приближает страницу при вводе */
+.field input,.field select,.field textarea,.filters select{-webkit-appearance:none;appearance:none;font-size:16px}
+.field select,.filters select{padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239a9aa8' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.agree input{-webkit-appearance:auto;appearance:auto;width:20px;height:20px;flex:none}
+.chip,.btn,.burger,.fab a,.mbar .btn{touch-action:manipulation}
+/* На телефонах «наведение» залипает после касания — убираем подъёмы и увеличения */
+@media (hover:none){
+  .mcard:hover,.scard:hover,.ncard:hover,.btn:hover,.fab a:hover{transform:none}
+  .mcard:hover .mcard__img img,.scard:hover img,.ncard:hover img{transform:none}
+}
+@media (max-width:900px){
+  .nav{max-height:calc(100dvh - var(--hdr));overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+  .menu-open{overflow:hidden}
+  .mbar{-webkit-backdrop-filter:blur(10px);padding-left:calc(14px + env(safe-area-inset-left));padding-right:calc(14px + env(safe-area-inset-right))}
+  .has-mbar .fab{bottom:calc(86px + env(safe-area-inset-bottom))}
+  .has-mbar .ftr{padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+}
+@media (max-width:900px){
+  .fab{gap:8px}
+  .fab a{width:46px;height:46px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  .fab svg{width:22px;height:22px}
+  .has-mbar .fab{display:none}
+}
+.field select,.form--light .field select,.filters select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239a9aa8' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
