@@ -521,3 +521,84 @@ html{-webkit-tap-highlight-color:transparent}
   .xd__opts b{font-size:18px}
 }
 .hero--xd .xd__ribbon{margin-bottom:34px}
+
+/* ======================================================================
+   АГРЕССИВНЫЙ СТИЛЬ (как баннер «Новый XD»): всё тёмное, красный неон,
+   косые срезы, курсив капсом, грязь и горы
+   ====================================================================== */
+:root{--d0:#0a0606;--d1:#110a0a;--d2:#1a1010;--d3:#241616;--dl:rgba(255,255,255,.08);--txt:#c9c0b8;--cut:18px}
+body{background:var(--d0);color:var(--txt)}
+h1,h2,h3,h4{color:#fff}
+p{color:var(--txt)}
+.sec{background:var(--d0)}
+.sec--grey{background:radial-gradient(ellipse 80% 60% at 50% 0,rgba(200,16,46,.12),transparent 70%),var(--d1)}
+.sec--dark{background:url(../img/cn-cloud.svg) 0 0/360px auto,linear-gradient(180deg,#140909,#0a0606)}
+.sec h2,.sec .h2,.ph h1{font-style:italic;text-transform:uppercase;letter-spacing:-.01em}
+.sec__head h2::before,.h2::before{content:"// ";color:var(--red)}
+.sec__head p,.muted{color:#9c918a}
+.kicker{display:inline-flex;padding:6px 14px 6px 12px;background:var(--red);color:#fff;transform:skewX(-12deg);box-shadow:0 0 22px rgba(200,16,46,.45)}
+.kicker::before{display:none}
+.kicker .han{color:var(--gold-l)}
+.sec--dark .kicker{color:#fff}
+
+/* Кнопки — рубленые углы */
+.btn{border-radius:0;clip-path:polygon(var(--cut) 0,100% 0,calc(100% - var(--cut)) 100%,0 100%);padding:0 34px;font-style:italic;box-shadow:none;background:linear-gradient(180deg,#e01a35,#b00d24)}
+.btn:hover{transform:none;filter:brightness(1.15);box-shadow:none}
+.btn--ghost{background:rgba(255,255,255,.04);box-shadow:none;outline:2px solid rgba(255,255,255,.35);outline-offset:-2px}
+.btn--dark{background:linear-gradient(180deg,#2a1a1a,#160d0d)}
+.btn--ghost:hover{background:#fff;color:#000}
+
+/* Карточки — тёмные, рубленый угол, красная подсветка */
+.scard,.ncard,.mcard,.stat,.empty,.why__item,.form--light,.spec,.tl{background:linear-gradient(160deg,var(--d3),var(--d2));color:var(--txt);box-shadow:inset 0 0 0 1px var(--dl);border-radius:0;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}
+.scard:hover,.ncard:hover,.mcard:hover{box-shadow:inset 0 0 0 1px rgba(255,40,60,.6),0 0 0 rgba(0,0,0,0);background:linear-gradient(160deg,#2e1414,#1a0d0d)}
+.scard h3,.ncard h3,.mcard h3,.mcard__specs b,.price,.prod__price,.stat b,.spec td{color:#fff}
+.scard p,.ncard p{color:#a99f98}
+.scard__big,.show__bg{color:rgba(255,255,255,.035)}
+.show__bg.han{color:rgba(200,16,46,.12)}
+.mcard__img,.prod__img{background:#000 url(../img/scene-1.webp) center/cover;border-radius:0}
+.split__img{border-radius:0;background:var(--d2)}
+.why__item{padding:26px}
+.why__item svg{color:var(--red)}
+.arrow{background:var(--d2);border-color:rgba(255,255,255,.2);color:#fff}
+.arrow:hover{background:var(--red);border-color:var(--red)}
+.show__dots button{background:rgba(255,255,255,.25)}
+.chip{background:var(--d2);border-color:rgba(255,255,255,.14);color:#e9e2dc;border-radius:0;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.chip:hover{border-color:var(--red)}
+.chip.on{background:var(--red);border-color:var(--red);color:#fff}
+.filters select,.field input,.field select,.field textarea,.form--light .field input,.form--light .field select,.form--light .field textarea{background-color:#0d0808;border-color:rgba(255,255,255,.14);color:#fff;border-radius:0}
+.form--light h3,.form--light label,.form--light .field label{color:#fff}
+.spec th{color:#9c918a}
+.spec td,.spec th{border-color:rgba(255,255,255,.08)}
+.crumbs,.crumbs a{color:#b5aaa2}
+.ph{background:linear-gradient(90deg,rgba(10,6,6,.92),rgba(10,6,6,.45)),url(../img/scene-2.webp) center 60%/cover}
+.ph::before{display:none}
+.ph h1{font-size:clamp(38px,6vw,80px)}
+.hdr.is-solid,.hdr--solid{background:rgba(8,4,4,.94)}
+.ftr{background:#070404}
+
+/* Косые срезы между блоками */
+.sec--dark,.sec--grey{clip-path:polygon(0 0,100% 28px,100% 100%,0 calc(100% - 28px));margin:-28px 0;position:relative;z-index:1}
+.sec--dark::before{top:28px}
+.hero{z-index:2}
+
+/* Красный неон по краю заголовков */
+.prod h1,.xd__title{text-shadow:0 2px 0 #000,0 0 40px rgba(200,16,46,.35)}
+::selection{background:var(--red);color:#fff}
+@media(max-width:900px){
+  .sec--dark,.sec--grey{clip-path:polygon(0 0,100% 16px,100% 100%,0 calc(100% - 16px));margin:-16px 0}
+  .sec--dark::before{top:16px}
+  .btn{--cut:12px;padding:0 26px}
+}
+/* живые фото заполняют рамку целиком */
+.mcard__img,.prod__img{padding:0;overflow:hidden;background:#000}
+.mcard__img img,.prod__img img{width:100%;height:100%;max-height:none;object-fit:cover}
+.mcard:hover .mcard__img img{transform:scale(1.05)}
+.show__img img{border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 0 1px rgba(200,16,46,.25)}
+.scard img{width:calc(100% + 44px);max-width:none;margin:-22px -22px 14px;aspect-ratio:4/3;object-fit:cover}
+@media(max-height:500px) and (orientation:landscape) and (min-width:600px){.prod__img img{max-height:none;height:100%;width:100%}}
+/* контраст на тёмном: красный текст светлее, пункты списков тёмные */
+:root{--red-t:#ff4258}
+.stat small,.mcard__specs small,.scard__more,.ncard time,.disc,.sale,.mcard .badge{color:var(--red-t)}
+.stat small,.mcard__specs small,.scard__more,.ncard time{color:var(--red-t)}
+option{background:#140c0c;color:#fff}
+:root{--red:#e8192f;--red-d:#b80f24}
