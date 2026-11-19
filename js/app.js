@@ -85,7 +85,8 @@
     }));
     sort.addEventListener("change", () => {
       const k = sort.value;
-      const list = k ? order.slice().sort((a, b) => k === "weight" ? a.dataset.weight - b.dataset.weight : b.dataset[k] - a.dataset[k]) : order;
+      const num = (c) => +c.dataset[k.replace("-asc", "")] || (k === "price-asc" ? Infinity : 0);
+      const list = k ? order.slice().sort((a, b) => (k === "weight" || k === "price-asc") ? num(a) - num(b) : num(b) - num(a)) : order;
       list.forEach((c) => grid.appendChild(c));
     });
     const h = location.hash.slice(1);
@@ -126,8 +127,12 @@
     try {
       const r = await fetch("/api/lead", {
         method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, agree: true, page: location.pathname }),
+        body: JSON.stringify({ ...data, agree: true, page: location.pathname, t: Math.round(performance.now()) }),
       });
+      if (r.status === 400 || r.status === 429) {
+        const j = await r.json().catch(() => ({}));
+        return show("err", typeof j.detail === "string" ? j.detail : "Проверьте поля формы.");
+      }
       if (!r.ok) throw new Error(r.status);
       form.reset();
       show("ok", "Спасибо! Заявка отправлена, мы скоро перезвоним.");

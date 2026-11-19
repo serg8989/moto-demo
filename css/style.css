@@ -306,3 +306,15 @@ p{margin:0 0 1em}
   .spec th,.spec td{padding:12px 14px;display:block;width:auto}
   .spec th{padding-bottom:0;border:0}
 }
+/* Цена со скидкой и наличие */
+.price s,.prod__sum s{font-weight:600;font-size:.62em;color:#9a9aa4;margin-left:4px}
+.sale{font-style:normal;font-size:.6em;background:var(--red);color:#fff;padding:2px 6px;border-radius:4px;vertical-align:middle}
+.stock{display:block;font:700 11px var(--head);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.stock::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.stock--in{color:#1f9d55}.stock--in::before{background:#1f9d55;box-shadow:0 0 0 3px rgba(31,157,85,.18)}
+.stock--order{color:#b7791f}.stock--order::before{background:#d69e2e}
+.prod__sum{display:block}
+.mcard__foot{align-items:flex-end;gap:10px}
+.mcard__foot .price{display:flex;flex-wrap:wrap;align-items:center;gap:2px 6px}
+.mcard__foot .price s{margin:0}
+.mcard__go{white-space:nowrap}

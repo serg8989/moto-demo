@@ -1,0 +1,210 @@
+[
+ {
+  "id": "exe880-enduro",
+  "name": "E·XE 880 Enduro",
+  "series": "exe",
+  "seriesName": "E·XE",
+  "img": "img/exe880-enduro.webp",
+  "badge": "Factory Edition"
+ },
+ {
+  "id": "exe880-super",
+  "name": "E·XE 880 Super",
+  "series": "exe",
+  "seriesName": "E·XE",
+  "img": "img/exe880-super.webp",
+  "badge": "Супермото"
+ },
+ {
+  "id": "exe-l3e",
+  "name": "E·XE-L3E",
+  "series": "exe",
+  "seriesName": "E·XE",
+  "img": "img/exe-l3e.webp",
+  "badge": "Дорожный допуск L3e"
+ },
+ {
+  "id": "exe800-enduro",
+  "name": "E·XE800 Enduro",
+  "series": "exe",
+  "seriesName": "E·XE",
+  "img": "img/exe800-enduro.webp",
+  "badge": ""
+ },
+ {
+  "id": "xd-pro",
+  "name": "X·D PRO",
+  "series": "xd",
+  "seriesName": "X·D",
+  "img": "img/xd-pro.webp",
+  "badge": "Factory Edition"
+ },
+ {
+  "id": "xe-pro-r",
+  "name": "XE PRO R",
+  "series": "xe",
+  "seriesName": "X·E",
+  "img": "img/xe-pro-r.webp",
+  "badge": ""
+ },
+ {
+  "id": "xe-pro-s",
+  "name": "XE PRO S",
+  "series": "xe",
+  "seriesName": "X·E",
+  "img": "img/xe-pro-s.webp",
+  "badge": ""
+ },
+ {
+  "id": "xe-pro-s-enduro",
+  "name": "XE PRO S Enduro",
+  "series": "xe",
+  "seriesName": "X·E",
+  "img": "img/xe-pro-s-enduro.webp",
+  "badge": ""
+ },
+ {
+  "id": "xe-pro-s-super",
+  "name": "XE PRO S Super",
+  "series": "xe",
+  "seriesName": "X·E",
+  "img": "img/xe-pro-s-super.webp",
+  "badge": "Супермото"
+ },
+ {
+  "id": "xe-pro-r-l3e",
+  "name": "XE PRO R L3E",
+  "series": "xe",
+  "seriesName": "X·E",
+  "img": "img/xe-pro-r-l3e.webp",
+  "badge": "Дорожный допуск L3e"
+ },
+ {
+  "id": "xe-l1e-b",
+  "name": "XE L1E-B",
+  "series": "xe",
+  "seriesName": "X·E",
+  "img": "img/xe-l1e-b.webp",
+  "badge": "Дорожный допуск L1e"
+ },
+ {
+  "id": "xf-pro",
+  "name": "XF Pro",
+  "series": "xf",
+  "seriesName": "X·F",
+  "img": "img/xf-pro.webp",
+  "badge": ""
+ },
+ {
+  "id": "xf-pro-mx",
+  "name": "XF PRO MX",
+  "series": "xf",
+  "seriesName": "X·F",
+  "img": "img/xf-pro-mx.webp",
+  "badge": "Кросс"
+ },
+ {
+  "id": "xf-pro-super",
+  "name": "XF Pro Super",
+  "series": "xf",
+  "seriesName": "X·F",
+  "img": "img/xf-pro-super.webp",
+  "badge": "Супермото"
+ },
+ {
+  "id": "xf-pro-l1e",
+  "name": "XF PRO L1E",
+  "series": "xf",
+  "seriesName": "X·F",
+  "img": "img/xf-pro-l1e.webp",
+  "badge": "Дорожный допуск L1e"
+ },
+ {
+  "id": "ex800",
+  "name": "EX800",
+  "series": "ex800",
+  "seriesName": "EX800",
+  "img": "img/ex800.webp",
+  "badge": ""
+ },
+ {
+  "id": "ex800-pro",
+  "name": "EX800 PRO",
+  "series": "ex800",
+  "seriesName": "EX800",
+  "img": "img/ex800-pro.webp",
+  "badge": ""
+ },
+ {
+  "id": "ex800-super",
+  "name": "EX800 Super",
+  "series": "ex800",
+  "seriesName": "EX800",
+  "img": "img/ex800-super.webp",
+  "badge": "Супермото"
+ },
+ {
+  "id": "et700-trail",
+  "name": "ET 700 TRAIL",
+  "series": "et",
+  "seriesName": "E·T",
+  "img": "img/et700-trail.webp",
+  "badge": ""
+ },
+ {
+  "id": "et600-trail",
+  "name": "ET 600 TRAIL",
+  "series": "et",
+  "seriesName": "E·T",
+  "img": "img/trail-photo.webp",
+  "badge": ""
+ },
+ {
+  "id": "ext700",
+  "name": "E·XT700",
+  "series": "ext",
+  "seriesName": "E·XT",
+  "img": "img/ext-series.webp",
+  "badge": ""
+ },
+ {
+  "id": "ext600",
+  "name": "E·XT600",
+  "series": "ext",
+  "seriesName": "E·XT",
+  "img": "img/ext-series.webp",
+  "badge": ""
+ },
+ {
+  "id": "ext500",
+  "name": "E·XT500",
+  "series": "ext",
+  "seriesName": "E·XT",
+  "img": "img/ext-series.webp",
+  "badge": ""
+ },
+ {
+  "id": "ext500-l1e",
+  "name": "EXT500 L1E",
+  "series": "ext",
+  "seriesName": "E·XT",
+  "img": "img/ext500-l1e.webp",
+  "badge": "Дорожный допуск L1e"
+ },
+ {
+  "id": "eat600-trial",
+  "name": "E·AT 600 TRIAL",
+  "series": "eat",
+  "seriesName": "E·AT",
+  "img": "img/trail-photo.webp",
+  "badge": ""
+ },
+ {
+  "id": "eat500-trial",
+  "name": "E·AT 500 TRIAL",
+  "series": "eat",
+  "seriesName": "E·AT",
+  "img": "img/trail-photo.webp",
+  "badge": ""
+ }
+]
